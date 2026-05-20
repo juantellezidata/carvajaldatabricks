@@ -1,0 +1,330 @@
+{
+  "lumi": {
+    "customers": {
+      "logical_name": "customers",
+      "file": "olist_customers_dataset.csv",
+      "rows": 99441,
+      "columns": 5,
+      "columns_list": [
+        "customer_id",
+        "customer_unique_id",
+        "customer_zip_code_prefix",
+        "customer_city",
+        "customer_state"
+      ],
+      "null_columns": {},
+      "dtypes": {
+        "customer_id": "object",
+        "customer_unique_id": "object",
+        "customer_zip_code_prefix": "int64",
+        "customer_city": "object",
+        "customer_state": "object"
+      },
+      "nunique": {
+        "customer_id": 99441,
+        "customer_unique_id": 96096
+      }
+    },
+    "orders": {
+      "logical_name": "orders",
+      "file": "olist_orders_dataset.csv",
+      "rows": 99441,
+      "columns": 8,
+      "columns_list": [
+        "order_id",
+        "customer_id",
+        "order_status",
+        "order_purchase_timestamp",
+        "order_approved_at",
+        "order_delivered_carrier_date",
+        "order_delivered_customer_date",
+        "order_estimated_delivery_date"
+      ],
+      "null_columns": {
+        "order_approved_at": 160,
+        "order_delivered_carrier_date": 1783,
+        "order_delivered_customer_date": 2965
+      },
+      "dtypes": {
+        "order_id": "object",
+        "customer_id": "object",
+        "order_status": "object",
+        "order_purchase_timestamp": "object",
+        "order_approved_at": "object",
+        "order_delivered_carrier_date": "object",
+        "order_delivered_customer_date": "object",
+        "order_estimated_delivery_date": "object"
+      },
+      "nunique": {
+        "order_id": 99441,
+        "customer_id": 99441
+      }
+    },
+    "order_items": {
+      "logical_name": "order_items",
+      "file": "olist_order_items_dataset.csv",
+      "rows": 112650,
+      "columns": 7,
+      "columns_list": [
+        "order_id",
+        "order_item_id",
+        "product_id",
+        "seller_id",
+        "shipping_limit_date",
+        "price",
+        "freight_value"
+      ],
+      "null_columns": {},
+      "dtypes": {
+        "order_id": "object",
+        "order_item_id": "int64",
+        "product_id": "object",
+        "seller_id": "object",
+        "shipping_limit_date": "object",
+        "price": "float64",
+        "freight_value": "float64"
+      },
+      "nunique": {
+        "order_id": 98666,
+        "order_item_id": 21,
+        "product_id": 32951,
+        "seller_id": 3095
+      }
+    },
+    "order_payments": {
+      "logical_name": "order_payments",
+      "file": "olist_order_payments_dataset.csv",
+      "rows": 103886,
+      "columns": 5,
+      "columns_list": [
+        "order_id",
+        "payment_sequential",
+        "payment_type",
+        "payment_installments",
+        "payment_value"
+      ],
+      "null_columns": {},
+      "dtypes": {
+        "order_id": "object",
+        "payment_sequential": "int64",
+        "payment_type": "object",
+        "payment_installments": "int64",
+        "payment_value": "float64"
+      },
+      "nunique": {
+        "order_id": 99440,
+        "payment_sequential": 29
+      }
+    },
+    "order_reviews": {
+      "logical_name": "order_reviews",
+      "file": "olist_order_reviews_dataset.csv",
+      "rows": 99224,
+      "columns": 7,
+      "columns_list": [
+        "review_id",
+        "order_id",
+        "review_score",
+        "review_comment_title",
+        "review_comment_message",
+        "review_creation_date",
+        "review_answer_timestamp"
+      ],
+      "null_columns": {
+        "review_comment_title": 87656,
+        "review_comment_message": 58247
+      },
+      "dtypes": {
+        "review_id": "object",
+        "order_id": "object",
+        "review_score": "int64",
+        "review_comment_title": "object",
+        "review_comment_message": "object",
+        "review_creation_date": "object",
+        "review_answer_timestamp": "object"
+      },
+      "nunique": {
+        "review_id": 98410,
+        "order_id": 98673
+      }
+    },
+    "products": {
+      "logical_name": "products",
+      "file": "olist_products_dataset.csv",
+      "rows": 32951,
+      "columns": 9,
+      "columns_list": [
+        "product_id",
+        "product_category_name",
+        "product_name_lenght",
+        "product_description_lenght",
+        "product_photos_qty",
+        "product_weight_g",
+        "product_length_cm",
+        "product_height_cm",
+        "product_width_cm"
+      ],
+      "null_columns": {
+        "product_category_name": 610,
+        "product_name_lenght": 610,
+        "product_description_lenght": 610,
+        "product_photos_qty": 610,
+        "product_weight_g": 2,
+        "product_length_cm": 2,
+        "product_height_cm": 2,
+        "product_width_cm": 2
+      },
+      "dtypes": {
+        "product_id": "object",
+        "product_category_name": "object",
+        "product_name_lenght": "float64",
+        "product_description_lenght": "float64",
+        "product_photos_qty": "float64",
+        "product_weight_g": "float64",
+        "product_length_cm": "float64",
+        "product_height_cm": "float64",
+        "product_width_cm": "float64"
+      },
+      "nunique": {
+        "product_id": 32951,
+        "product_category_name": 73
+      }
+    },
+    "sellers": {
+      "logical_name": "sellers",
+      "file": "olist_sellers_dataset.csv",
+      "rows": 3095,
+      "columns": 4,
+      "columns_list": [
+        "seller_id",
+        "seller_zip_code_prefix",
+        "seller_city",
+        "seller_state"
+      ],
+      "null_columns": {},
+      "dtypes": {
+        "seller_id": "object",
+        "seller_zip_code_prefix": "int64",
+        "seller_city": "object",
+        "seller_state": "object"
+      },
+      "nunique": {
+        "seller_id": 3095
+      }
+    },
+    "geolocation": {
+      "logical_name": "geolocation",
+      "file": "olist_geolocation_dataset.csv",
+      "rows": 1000163,
+      "columns": 5,
+      "columns_list": [
+        "geolocation_zip_code_prefix",
+        "geolocation_lat",
+        "geolocation_lng",
+        "geolocation_city",
+        "geolocation_state"
+      ],
+      "null_columns": {},
+      "dtypes": {
+        "geolocation_zip_code_prefix": "int64",
+        "geolocation_lat": "float64",
+        "geolocation_lng": "float64",
+        "geolocation_city": "object",
+        "geolocation_state": "object"
+      },
+      "nunique": {
+        "geolocation_zip_code_prefix": 19015
+      }
+    },
+    "product_category_translation": {
+      "logical_name": "product_category_translation",
+      "file": "product_category_name_translation.csv",
+      "rows": 71,
+      "columns": 2,
+      "columns_list": [
+        "product_category_name",
+        "product_category_name_english"
+      ],
+      "null_columns": {},
+      "dtypes": {
+        "product_category_name": "object",
+        "product_category_name_english": "object"
+      },
+      "nunique": {
+        "product_category_name": 71
+      }
+    }
+  },
+  "bagazo": {
+    "logical_name": "molienda_bagazo_y_lluvias",
+    "file_original": "molienda_bagazo_y_lluvias_II (1).xlsx",
+    "file_csv": "molienda_bagazo_y_lluvias_II.csv",
+    "sheet": "Base de datos",
+    "rows": 798,
+    "columns": 13,
+    "date_min": "2024-01-01",
+    "date_max": "2026-03-08",
+    "columns_list": [
+      "Fecha",
+      "PROMEDIO LLUVIAS  PROVIDENCIA (mm)",
+      "CAÑA MOLIDA PROVIDENCIA (Toneladas)",
+      "BAGAZO ENTREGADO PROVIDENCIA (Toneladas)",
+      "Comentarios\nPROVIDENCIA",
+      "PROMEDIO LLUVIAS ILC (mm)",
+      "CAÑA MOLIDA ILC (Toneladas)",
+      "BAGAZO ENTREGADO ILC (Toneladas)",
+      "Comentarios\nILC",
+      "PROMEDIO LLUVIAS INCAUCA  (mm)",
+      "CAÑA MOLIDA INCAUCA (Toneladas)",
+      "BAGAZO ENTREGADO INCAUCA (Toneladas)",
+      "Comentarios\nINCAUCA"
+    ],
+    "null_columns": {
+      "Comentarios\nPROVIDENCIA": 717,
+      "Comentarios\nILC": 700,
+      "Comentarios\nINCAUCA": 707
+    },
+    "dtypes": {
+      "Fecha": "datetime64[ns]",
+      "PROMEDIO LLUVIAS  PROVIDENCIA (mm)": "float64",
+      "CAÑA MOLIDA PROVIDENCIA (Toneladas)": "float64",
+      "BAGAZO ENTREGADO PROVIDENCIA (Toneladas)": "float64",
+      "Comentarios\nPROVIDENCIA": "object",
+      "PROMEDIO LLUVIAS ILC (mm)": "float64",
+      "CAÑA MOLIDA ILC (Toneladas)": "int64",
+      "BAGAZO ENTREGADO ILC (Toneladas)": "float64",
+      "Comentarios\nILC": "object",
+      "PROMEDIO LLUVIAS INCAUCA  (mm)": "float64",
+      "CAÑA MOLIDA INCAUCA (Toneladas)": "float64",
+      "BAGAZO ENTREGADO INCAUCA (Toneladas)": "float64",
+      "Comentarios\nINCAUCA": "object"
+    },
+    "providencia": {
+      "lluvia_mm_promedio": 3.79,
+      "lluvia_mm_max": 35.64,
+      "cana_promedio": 9049.27,
+      "cana_ceros": 62,
+      "bagazo_promedio": 398.12,
+      "bagazo_ceros": 103,
+      "comentarios_no_nulos": 81
+    },
+    "ilc": {
+      "lluvia_mm_promedio": 4.89,
+      "lluvia_mm_max": 57.97,
+      "cana_promedio": 3268.41,
+      "cana_ceros": 158,
+      "bagazo_promedio": 339.58,
+      "bagazo_ceros": 177,
+      "comentarios_no_nulos": 98
+    },
+    "incauca": {
+      "lluvia_mm_promedio": 4.89,
+      "lluvia_mm_max": 57.97,
+      "cana_promedio": 9236.65,
+      "cana_ceros": 139,
+      "bagazo_promedio": 572.85,
+      "bagazo_ceros": 155,
+      "comentarios_no_nulos": 91
+    }
+  }
+}
