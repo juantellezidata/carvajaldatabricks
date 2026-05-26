@@ -968,4 +968,3 @@ dbutils.jobs.taskValues.set(key="preproc_output_table", value=OUTPUT_TABLE)
 rowcount = spark.table(OUTPUT_TABLE).count()
 dbutils.jobs.taskValues.set(key="preproc_rowcount", value=str(rowcount))
 print(f"[preprocess] escrito {OUTPUT_TABLE} con {rowcount} filas")
-
